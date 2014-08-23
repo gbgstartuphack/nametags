@@ -1,0 +1,65 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 100%;
+  text-align: center;
+}
+
+section {
+  width: 8.4cm;
+  height: 5.4cm;
+  margin: .5cm;
+  float: left;
+  page-break-inside: avoid;
+  border: 1px dotted #ccc;
+  position: relative;
+}
+
+h1 {
+  font-family: 'Pacifico';
+  font-size: 140%;
+  font-weight: normal;
+  margin-bottom: .30cm;
+}
+
+h1 small {
+  margin-top: 1cm;
+  font-family: 'Ubuntu';
+  font-size: 42%;
+  display: block;
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: .5em;
+  margin-left: .75em;
+  color: #999;
+}
+
+h2, h3 {
+  font-family: 'Open Sans';
+}
+
+h2 {
+  margin: 0;
+  font-weight: 600;
+  font-size: 160%;
+  text-transform: capitalize;
+  padding: 0 .75cm;
+  width: 100%;
+}
+
+h3 {
+  font-weight: 200;
+  font-size: 120%;
+  position: absolute;
+  width: 100%;
+  padding: 0 .75cm;
+  bottom: .5cm;
+  left: 0;
+}

@@ -1,0 +1,37 @@
+#!/usr/bin/env node
+
+var fs = require('fs');
+
+if (!fs.existsSync(process.argv[2]) || !fs.existsSync(process.argv[3])) {
+  console.log('Usage: node render.js [template.html] [responses.json]');
+}
+
+var responses = JSON.parse(fs.readFileSync(process.argv[3], 'utf-8'));
+
+var handlebars = require('handlebars');
+
+var template = fs.readFileSync(process.argv[2], 'utf-8');
+
+var renderer = handlebars.compile(template);
+
+//var responsesX4 = responses.reduce(function(arr, item, i) {
+  //if (i % 4 === 0) {
+    //if (arr[arr.length - 1]) {
+      //var copy = arr[arr.length - 1].slice();
+      //var temp = copy[1];
+      //copy[1] = copy[0];
+      //copy[0] = temp;
+      //temp = copy[2];
+      //copy[2] = copy[3];
+      //copy[3] = temp;
+      //arr.push(copy);
+    //}
+    //arr.push([]);
+  //}
+  //arr[arr.length - 1].push(item);
+  //return arr;
+//}, []);
+
+//responsesX4.push(responsesX4[responsesX4.length - 1].slice());
+
+console.log(renderer({ responses: responses }));
